@@ -4,7 +4,7 @@
 current_date=$(date +%Y-%m-%d)
 
 # 检查输入参数
-if [ "$#" -ne 3 ]; then
+if [ "$#" -ne 2 ]; then
   echo "Usage: $0 <type> <input>"
   exit 1
 fi
