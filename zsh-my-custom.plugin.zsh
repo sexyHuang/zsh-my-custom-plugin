@@ -6,7 +6,6 @@ SCRIPT_DIR=$(dirname "${0:A}")
 # 为脚本添加执行权限
 chmod +x "$SCRIPT_DIR/scripts/create_branch.sh"
 
-chmod +x ./scripts/create_branch.sh
 # 配置项
 export GIT_BRANCH_NAME="huangjianyong"
 export GIT_SOURCE_BRANCH="main"
