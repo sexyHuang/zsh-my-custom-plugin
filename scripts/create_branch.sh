@@ -22,7 +22,16 @@ branch_name="${type}/${name}/${current_date}-${input}"
 
 # 切换到指定的源分支并拉取最新代码
 git checkout $source_branch
+if [ $? -ne 0 ]; then
+  echo "Error: Failed to checkout branch '$source_branch'"
+  exit 1
+fi
+
 git pull origin $source_branch
+if [ $? -ne 0 ]; then
+  echo "Error: Failed to pull latest code from '$source_branch'"
+  exit 1
+fi
 
 # 创建并切换到新分支
 git checkout -b $branch_name
